@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Encryption/Decryption with AES</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/"
+          ><h1 class="header-title">
+            <img
+              src="/images/securitylogo.png"
+              alt="securitylogo"
+              class="image"
+            />
+            Secure Images
+          </h1></a
+        >
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="welcome-message">
+        <h2>Welcome to Secure Images</h2>
+        <p>
+          Encrypt and decrypt your images securely with our AES encryption tool.
+        </p>
+        <button
+          class="btn btn-primary animated-btn"
+          onclick="window.location.href='/pages/enc-dec-page.html'"
+        >
+          Start Encryption-Decryption
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footermain">
+        <div class="logomain">
+          <a href="https://www.linkedin.com/in/darshak-kamalia" target="_blank">
+            <img
+              src="/images/sociallogo/linkdinlogo.png"
+              alt="LinkedIn Logo"
+              class="image"
+          /></a>
+          <a href="https://x.com/" target="_blank">
+            <img
+              src="/images/sociallogo/twitterlogo.png"
+              alt="twitterlogo"
+              class="image"
+          /></a>
+          <a href="https://github.com/" target="_blank">
+            <img
+              src="/images/sociallogo/githublogo.png"
+              alt="githublogo"
+              class="image"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

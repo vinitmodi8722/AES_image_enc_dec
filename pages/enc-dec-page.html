@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Encryption/Decryption with AES</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/"
+          ><h1 class="header-title">
+            <img
+              src="/images/securitylogo.png"
+              alt="securitylogo"
+              class="image"
+            />
+            Secure Images
+          </h1></a
+        >
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages//contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>Image Encryption/Decryption (AES)</h1>
+
+      <div class="section" id="encrypt">
+        <h2>Encrypt an Image</h2>
+        <input type="file" id="uploadImage" accept="image/*" />
+        <input
+          type="text"
+          id="encryptionKeyInput"
+          placeholder="Enter a key for encryption"
+        />
+        <button onclick="encryptImage()">Encrypt Image</button>
+        <p id="encryptionKeyDisplay"></p>
+      </div>
+
+      <div class="section" id="decrypt">
+        <h2>Decrypt an Image</h2>
+        <input
+          type="file"
+          id="uploadEncryptedImage"
+          accept="application/octet-stream"
+        />
+        <input
+          type="text"
+          id="decryptionKey"
+          placeholder="Enter the encryption key"
+        />
+        <button onclick="decryptImage()">Decrypt Image</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footermain">
+        <div class="logomain">
+          <a href="https://www.linkedin.com/in/darshak-kamalia" target="_blank">
+            <img
+              src="/images/sociallogo/linkdinlogo.png"
+              alt="LinkedIn Logo"
+              class="image"
+          /></a>
+          <a href="https://x.com/" target="_blank">
+            <img
+              src="/images/sociallogo/twitterlogo.png"
+              alt="twitterlogo"
+              class="image"
+          /></a>
+          <a href="https://github.com/" target="_blank">
+            <img
+              src="/images/sociallogo/githublogo.png"
+              alt="githublogo"
+              class="image"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
