@@ -4,7 +4,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     height: 100vh;
     position: relative;
 }
@@ -19,8 +19,8 @@ body::before {
     background-image: url("/images/bg.webp");
     background-size: cover;
     background-position: center;
-    opacity: 0.7; 
-    z-index: -1; 
+    opacity: 0.8;
+    z-index: -1;
 }
 
 .container {
@@ -32,6 +32,56 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(219, 226, 225, 0.292);
     text-align: center;
+}
+
+.nonagon {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    width: 500px;
+    height: 500px;
+    background-color: #ea4228;
+    clip-path: polygon(50% 0%,
+            100% 22%,
+            100% 78%,
+            0% 78%,
+            0% 22%);
+    animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #ea4228;
+    }
+
+    100% {
+        background-color: #798109;
+    }
+}
+
+
+.menucontainer {
+    background-image: url("/images/bg.webp");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    padding: 120px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(219, 226, 225, 0.292);
+    text-align: center;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+    border-top-left-radius: 90px;
+    border-end-end-radius: 90px;
+
 }
 
 .aboutcontainer {
@@ -117,7 +167,7 @@ footer {
     display: flex;
     justify-content: end;
     padding-right: 5%;
-    background-color: #eab028;
+    background-color: #ea4228;
     color: rgb(0, 0, 0);
 }
 
@@ -132,26 +182,31 @@ header a {
 
 header a:hover {
     text-decoration: underline;
-    color: red;
+    color: rgb(255, 255, 0);
 }
 
-.footermain{
+.footermain {
     display: flex;
     justify-content: center;
 }
 
-.image{
+.image {
     height: 30px;
     width: 30px;
     margin-right: 10px;
 }
 
+.lockimage {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
 
 
 /* Header Styling */
 header {
     width: 100%;
-    background-color: #eab028;
+    background-color: #ea4228;
     padding: 15px;
     position: fixed;
     top: 0;
@@ -181,12 +236,64 @@ header {
 
 
 
-.followus{
+.followus {
     display: flex;
     justify-content: center;
 }
 
-.followusmain{
+.followusmain {
     display: flex;
     justify-content: center;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between inputs */
+    width: 300px;
+    /* Set a width for the container */
+    margin: 20px auto;
+    /* Center the container */
+}
+
+/* Input styling */
+.styled-input {
+    padding: 12px;
+    border: 2px solid #0e76a8;
+    /* Border color */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+    outline: none;
+    /* Remove default outline */
+}
+
+/* Change border color on focus */
+.styled-input:focus {
+    border-color: #ea4228;
+    /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(234, 66, 40, 0.5);
+    /* Shadow effect */
+}
+
+/* Change background color on hover */
+.styled-input:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Light background on hover */
+}
+
+/* Placeholder styling */
+.styled-input::placeholder {
+    color: #aaa;
+    /* Placeholder color */
+    transition: color 0.3s ease;
+    /* Smooth transition for placeholder */
+}
+
+/* Change placeholder color on focus */
+.styled-input:focus::placeholder {
+    color: #0e76a8;
+    /* Change placeholder color on focus */
 }
